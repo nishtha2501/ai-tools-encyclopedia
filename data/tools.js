@@ -5,6 +5,7 @@ const tools = [
         category: "Writing",
         pricing: "Freemium",
         rating: 4.9,
+        // platform: "Web, Android, iOS",
         description: "AI assistant for writing, coding and learning.",
         website: "https://chatgpt.com",
         logo: "images/chatgpt.png"

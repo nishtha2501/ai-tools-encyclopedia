@@ -130,33 +130,63 @@ sortSelect.addEventListener("change", function(){
             updateDisplay();
 });
 
-compareBtn.addEventListener("click", function(){
-    if(compareList.length ===0){
-        comparisonContent.innerHTML = "<p>Please select at leasr one tool.</p>";
-    }
-    else{
-        let html = "";
 
-        compareList.forEach(function(id){
-            const tool = tools.find(function(item){
-                return item.id === id;
+
+       compareBtn.addEventListener("click", function(){
+        if(compareList.length ==0){
+            comparisonContent.innerHTML = "<p>Please select at least one tool.</p>";
+        }
+       
+        else{
+             const selectedTools = compareList.map(function(id){
+            return tools.find(function(tool){
+                return tool.id ===id;
             });
-            html += `
-            <div class="compare-card">
-            <img src="${tool.logo}" class="yool-logo">
-            <h3>${tool.name}</h3>
-            <p>Rating: ${tool.rating}</p>
-            <p>Category: ${tool.category}</p>
-            <p>${tool.description}</p>
-            <a href="${tool.website}" target="_blank">Visit Website</a>
-            </div>
-            `;
         });
-        comparisonContent.innerHTML = html;
-    }
+            let html = `
+            <table class="compare-table">
+                <tr>
+                    <th>Logo</th>
+                    <th>Name</th>
+                    <th>Rating</th>
+                    <th>category</th>
+                    <th>Website</th>
+                </tr>
+                `;
+    
+    selectedTools.forEach(function(tool){
+        html += `
+        <tr>
+            <td><img src ="${tool.logo}" class="compare-logo"></td>
+            <td>${tool.name}</td>
+            <td>⭐ ${tool.rating}</td>
+            <td>${tool.category}</td>
+            <td>
+                <a href ="${tool.website}"
+            target="_blank">
+            Visit
+                </a>
+                    </td>
+            </tr>
+            `;
+    });
+           html += "</table>";
+           comparisonContent.innerHTML = html;
+        }
+       
     compareModal.style.display = "flex";
 });
 
 closeModal.addEventListener("click", function(){
     compareModal.style.display = "none";
+});
+
+window.addEventListener("scroll", function(){
+    const nav = document.querySelector("nav");
+    if(window.scrollY>20){
+        nav.classList.add("nav-scrolled");
+    }
+    else{
+        nav.classList.remove("nav-scrolled");
+    }
 });
