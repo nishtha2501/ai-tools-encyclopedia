@@ -577,3 +577,55 @@ nav a:hover{
     box-shadow: 0 8px 25px rgba(0,0,0,0.12);
     transition: all 0.3s ease;
 }
+
+.glow{
+    box-shadow: 0 0 20px rgba(37,99,235,0.6);
+    border-color: #2563eb;
+    transition: 0.3s;
+}
+
+body.dark .hero{
+    background: #2b3445;
+}
+body.dark nav a{
+    color: #f3f4f6;
+}
+body.dark nav a:hover{
+    color: #60a5fa;
+}
+body.dark .category-card{
+    background: #374151;
+    color: #ffffff;
+    border: 1px solid #4b5563;
+}
+body.dark .category-card:hover{
+    background: #4a65af;
+}
+body.dark .hero h1{
+    color: #ffffff;
+}
+body.dark .hero p{
+    color: #d1d5db;
+}
+body.dark .tool-card {
+    background: #374151;
+    color: white;
+    border: 1px solid #3b465a;
+}
+body.dark nav{
+    background: #181818;
+}
+body.dark #search-input{
+    background: 2d2d2d;
+    color: white;
+    border: 1px solid #4a90e2;
+}
+body.dark .hero-btn,
+body.dark .compare-btn,
+body.dark .category-btn:hover,
+body.dark .visit-bbtn {
+    background-color: #3b82f6;
+}
+body.dark .sort-container{
+    background: #2b3445;
+}

@@ -10,6 +10,7 @@ const searchInput = document.getElementById("search-input");
 const categoryCards = document.querySelectorAll(".category-card");
 const sortSelect = document.getElementById("sort-select");
 const themeBtn = document.getElementById("theme-btn");
+const exploreBtn = document.getElementById("explore-btn");
 
 let currentSearch = "";
 let currentCategory = "All";
@@ -51,33 +52,39 @@ displayTools(tools);
 
 function updateDisplay(){
     let filteredTools = [...tools];
+
     if(currentSearch !== ""){
         filteredTools = filteredTools.filter(function(tool){
             return tool.name.toLowerCase().includes(currentSearch);
         });
     }
+
+    if(currentCategory !== "All"){
+        filteredTools = filteredTools.filter(function(tool){
+            return tool.category === currentCategory;
+        });
+    }
+
+    if(currentSort === "rating"){
+        filteredTools.sort(function(a, b){
+            return b.rating - a.rating;
+        });
+    }
+    if(currentSort === "name"){
+        filteredTools.sort(function(a, b){
+            return a.name.localeCompare(b.name);
+        });
+    }
+    displayTools(filteredTools);
 }
+
 
 
 searchInput.addEventListener("input", function(){
    currentSearch = searchInput.value.toLowerCase();
    updateDisplay();
 });
-if(currentCategory !== "All"){
-    filteredTools = filteredTools.filter(function(tool){
-        return tool.category ===currentCategory;
-    });
-}
-if(currentSort === "rating"){
-    filteredTools.sort(function(a, b){
-        return b.rating - a.rating;
-    });
-}
-if(currentSort==="name"){
-    filteredTools.sort(function(a,b){
-        return a.name.localeCompare(b.name);
-    });
-}
+
 categoryCards.forEach(function(card){
     card.addEventListener("click", function(){
         categoryCards.forEach(function(category){
@@ -124,7 +131,7 @@ toolsContainer.addEventListener("click", function(event){
 });
 
 sortSelect.addEventListener("change", function(){
-            let sortedTools = [...tools];
+            
 
            currentSort=sortSelect.value;
             updateDisplay();
@@ -189,4 +196,16 @@ window.addEventListener("scroll", function(){
     else{
         nav.classList.remove("nav-scrolled");
     }
+});
+
+exploreBtn.addEventListener("click", function(){
+    searchInput.scrollIntoView({
+        behavior:"smooth",
+        block: "center"
+    });
+
+    setTimeout(function(){
+        searchInput.focus();
+        searchInput.classList.add("glow");
+    }, 1800);
 });
