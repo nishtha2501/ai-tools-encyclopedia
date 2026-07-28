@@ -39,7 +39,7 @@ function displayTools(toolArray){
         <img src="${tool.logo}" alt="${tool.name}" class="tool-logo">
         <h3>${tool.name}</h3>
         <p class="rating">⭐${tool.rating}</p>
-        <p>${tool.description}</p>
+        <p class="description">${tool.description}</p>
         <span class="category-tag">${tool.category}</span>
         <br><br>
         <a href="${tool.website}" target= "_blank" class="visit-btn">Visit Website</a>

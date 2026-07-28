@@ -620,12 +620,26 @@ body.dark #search-input{
     color: white;
     border: 1px solid #4a90e2;
 }
-body.dark .hero-btn,
-body.dark .compare-btn,
+body.dark .search-btn,
+body.dark .explore-btn,
 body.dark .category-btn:hover,
 body.dark .visit-bbtn {
     background-color: #3b82f6;
 }
-body.dark .sort-container{
-    background: #2b3445;
+body.dark #sort-select{
+    background: #374151;
+    color: white;
+    border: 1px solid #4a90e2;
 }
+body.dark .compare-label,
+body.dark .rating,
+body.dark .description{
+    color:rgb(187, 187, 187);
+}
+body.dark #compare-btn{
+    background-color: #488cf9;
+}
+/* body.dark .compare-checkbox{
+    background-color:  #374151;
+} */
+
