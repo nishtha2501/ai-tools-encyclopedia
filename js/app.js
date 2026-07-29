@@ -11,6 +11,8 @@ const categoryCards = document.querySelectorAll(".category-card");
 const sortSelect = document.getElementById("sort-select");
 const themeBtn = document.getElementById("theme-btn");
 const exploreBtn = document.getElementById("explore-btn");
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
 
 let currentSearch = "";
 let currentCategory = "All";
@@ -208,4 +210,8 @@ exploreBtn.addEventListener("click", function(){
         searchInput.focus();
         searchInput.classList.add("glow");
     }, 1800);
+});
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
 });

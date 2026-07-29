@@ -643,3 +643,45 @@ body.dark #compare-btn{
     background-color:  #374151;
 } */
 
+.hamburger{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    nav{
+        position: relative;
+    }
+
+    .hamburger{
+        display: block;
+    }
+    #nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 15px;
+        width: 180px;
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        gap: 15px;
+    }
+    #nav-links.active{
+        display: flex;
+    }
+    #theme-btn{
+        margin-right: 45px;
+    }
+    .logo{
+        font-size: 1.5rem;
+    }
+}
+
+
+body.dark #nav-links a{
+    color: white;
+}
