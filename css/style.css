@@ -652,10 +652,13 @@ body.dark #compare-btn{
 @media (max-width: 768px){
     nav{
         position: relative;
+        padding: 12px 15px;
     }
 
     .hamburger{
         display: block;
+        margin-right: 20px;
+        font-size: 24px;
     }
     #nav-links{
         display: none;
@@ -674,14 +677,28 @@ body.dark #compare-btn{
         display: flex;
     }
     #theme-btn{
-        margin-right: 45px;
+        margin-right: 10px;
+        margin-left: 10px;
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+        padding: 0;
     }
     .logo{
-        font-size: 1.5rem;
+        margin-right: auto;
+        font-size: 1.8rem;
+        white-space: nowrap;
     }
 }
 
 
-body.dark #nav-links a{
+/* body.dark #nav-links a{
     color: white;
+    background-color: #1e293b;
+} */
+body.dark #nav-links {
+    background: #2b3445;
+}
+body.dark #nav-links a {
+    color: #f3f4f6;
 }
