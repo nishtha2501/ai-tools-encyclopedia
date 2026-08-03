@@ -40,7 +40,10 @@ function displayTools(toolArray){
         data-id="${tool.id}">Compare </label>
         <img src="${tool.logo}" alt="${tool.name}" class="tool-logo">
         <h3>${tool.name}</h3>
-        <p class="rating">⭐${tool.rating}</p>
+        <div class="tool-meta">
+            <p class="rating">⭐${tool.rating}</p>
+            <span class="price-tag">${pricing}</span>
+        </div>
         <p class="description">${tool.description}</p>
         <span class="category-tag">${tool.category}</span>
         <br><br>

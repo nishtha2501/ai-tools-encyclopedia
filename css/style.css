@@ -702,3 +702,11 @@ body.dark #nav-links {
 body.dark #nav-links a {
     color: #f3f4f6;
 }
+
+.tool-meta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+

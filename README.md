@@ -39,16 +39,7 @@ ToolVerse-AI/
 │── README.md
 ```
 
-## 📸 Screenshots
 
-Add screenshots of your homepage and tool cards here.
-
-Example:
-
-```
-images/homepage.png
-images/dark-mode.png
-images/comparison.png
 ```
 
 ## 🚀 Getting Started
