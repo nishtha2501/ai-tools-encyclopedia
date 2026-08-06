@@ -42,7 +42,7 @@ function displayTools(toolArray){
         <h3>${tool.name}</h3>
         <div class="tool-meta">
             <p class="rating">⭐${tool.rating}</p>
-            <span class="price-tag">${pricing}</span>
+            
         </div>
         <p class="description">${tool.description}</p>
         <span class="category-tag">${tool.category}</span>
