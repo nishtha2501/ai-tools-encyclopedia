@@ -95,7 +95,6 @@ If you'd like to improve ToolVerse AI, feel free to fork the repository, create 
 
 GitHub: https://github.com/nishtha2501
 
-LinkedIn: *(Add your LinkedIn profile link here.)*
 
 ## ⭐ Support
 
